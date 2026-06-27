@@ -22,11 +22,14 @@ html,
 body {
   min-height: 100%;
   width: 100%;
+  margin: 0%;
   padding: 0%;
 }
 
 /* Base Layout */
 body {
+  overscroll-behavior: none;
+  overflow-x: hidden;
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--text-light);
   background: radial-gradient(circle at top, rgba(101, 214, 255, 0.14), transparent 25%),
