@@ -1,65 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Easton Mason Portfolio</title>
-
-    <!-- This styles.css file contains the styling for the webpage -->
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Interests | Mason Easton</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
 
 
 
-<body>
-    <!-- This HTML file contains the basic structure for a webpage to host my portfolio, interests, and content related to my resume including my resume itself-->
+    <body>
+        <main>
+            <header>
+                <nav class="card container nav-container">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="resume.html">Resume</a></li>
+                        <li><a href="interests.html" class="active">Interests</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="mobile-toggle">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </nav>
+            </header>
 
-    <nav class="card container nav-container">
-        <div class="logo">
-            <a href="index.html">Easton Mason</a>
-        </div>
-        <ul class="nav-links">
-            <li><a href="about.html" class="active">About Me</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="interests.html">Interests</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+            <section class="intro">
+                <h1 class="section-title">Interests</h1>
+                <p>This page highlights both my professional interests and the hobbies that inspire me outside of programming. From artificial intelligence and software development to video games, music, and movies, I enjoy exploring new technologies while pursuing creative projects that challenge me to keep learning.</p>
+            </section>
 
-        <!-- Mobile Toggle Buttons -->
-        <div class="mobile-toggle">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-    </nav>
+            <section>
+                <h2 class="section-subtitle">Professional Interests</h2>
+                <div class="feature-grid">
+                    <article class="card">
+                        <h3>Artificial Intelligence</h3>
+                        <p>Artificial intelligence and machine learning are among my favorite areas of computer science. During my capstone at Berea College, I built Moodr, a PyTorch-based music emotion classifier that predicts whether a song sounds Happy, Angry, Calm, or Sad using MFCC audio features. I enjoy building models that can interpret audio or visual data and am excited to continue exploring machine learning and computer vision.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Software Engineering</h3>
+                        <p> I enjoy creating software that solves real problems and seeing an idea become a finished application. Whether I’m developing desktop tools, web applications, or experimenting with games and AI, I appreciate every stage of the development process.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Cybersecurity</h3>
+                        <p>Security is an essential part of software development. I’m particularly interested in network and cloud security because I want the applications and websites I build to be secure, reliable, and resistant to malicious attacks.</p>
+                    </article>
+                    <article class="card">
+                        <h3>System Design</h3>
+                        <p>I’m interested in learning how to design systems that can support large numbers of users efficiently. While my projects have primarily been smaller in scale, I’m eager to gain experience building scalable and highly available applications.</p>
+                    </article>
+                </div>
+            </section>
 
+            <section>
+                <h2 class="section-subtitle">Technology &amp; Development</h2>
+                <div class="feature-grid">
+                    <article class="card">
+                        <h3>Web Development</h3>
+                        <p>Although I’ve worked on both frontend and backend development, I enjoy backend development the most. I like building the functionality that powers applications and am interested in learning frameworks such as Django, React, and Angular to become a stronger full-stack developer.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Open Source</h3>
+                        <p>I haven’t contributed to an open-source project yet, but it’s one of my long-term goals. I look forward to collaborating with other developers and giving back to the programming community.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Mobile Apps</h3>
+                        <p>Mobile development is an area I’m excited to explore. Now that I have access to Xcode, I hope to build cross-platform applications that reach both iOS and other devices.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Cloud Computing</h3>
+                        <p>Cloud platforms are becoming increasingly important in modern software development, and I’m eager to learn technologies such as AWS, Microsoft Azure, or Google Cloud. Understanding cloud infrastructure will help me build applications that are more scalable and reliable.</p>
+                    </article>
+                </div>
+            </section>
 
-    <h1 class="name">Easton Mason</h1>
+            <section>
+                <h2 class="section-subtitle">Personal Hobbies</h2>
+                <div class="feature-grid">
+                    <article class="card">
+                        <h3>Gaming</h3>
+                        <p>Video games are one of my biggest hobbies and a major reason I became interested in programming. I especially enjoy Soulsborne games, Hunt: Showdown, and indie titles like Hollow Knight and Terraria, and one of my long-term goals is to publish my own indie game.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Reading</h3>
+                        <p>I enjoy reading fiction and especially seinen manga. My favorite series is Tokyo Ghoul, and I enjoy stories with compelling characters and darker themes.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Fitness</h3>
+                        <p>Staying active helps me maintain a healthy balance outside of programming. After taking a weightlifting course in college, I now regularly practice bodyweight exercises such as push-ups, squats, sit-ups, and crunches.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Music</h3>
+                        <p>Music is a huge part of my everyday life. I primarily listen to metalcore, swancore, nu metal, alternative rock, grunge, and progressive metal, and I also enjoy playing guitar whenever I have the opportunity.</p>
+                    </article>
+                </div>
+            </section>
 
-    <p style="text-align: center;">Welcome to my personal portfolio website! Here, you can explore my interests, view my resume, and learn more about my professional background.</p>
+            <section>
+                <h2 class="section-subtitle">Creative Interests</h2>
+                <div class="feature-grid">
+                    <article class="card">
+                        <h3>Writing</h3>
+                        <p>While I don’t write professionally, I enjoy documenting projects and explaining technical concepts. Clear communication is an important skill that complements software development.</p>
+                    </article>
+                    <article class="card">
+                        <h3>UI/UX Design</h3>
+                        <p>Design isn’t my strongest area, but I appreciate the importance of creating intuitive and accessible user experiences. I’m continually working to improve my frontend design skills.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Content Creation</h3>
+                        <p>I’ve always enjoyed creating content and hope to start producing more YouTube videos featuring funny gaming moments with friends. It’s a creative outlet that combines several of my interests.</p>
+                    </article>
+                </div>
+            </section>
 
-    <h2 class="section-title">About Me</h2>
-    <p>I am a passionate individual with a keen interest in technology, design, and innovation. My goal is to leverage my skills and experiences to contribute meaningfully to the projects I undertake.</p>
+            <section>
+                <h2 class="section-subtitle">Learning Goals</h2>
+                <div class="feature-grid">
+                    <article class="card">
+                        <h3>Learn New Languages</h3>
+                        <p>I’m currently interested in learning Rust and Go to broaden my programming experience and gain exposure to different programming paradigms.s</p>
+                    </article>
+                    <article class="card">
+                        <h3>Build Larger Projects</h3>
+                        <p>One of my biggest goals is to work on larger applications and eventually develop and publish an indie game. Building increasingly ambitious projects is one of the best ways to continue growing as a developer.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Earn Certifications</h3>
+                        <p>I’d like to earn certifications from AWS, Microsoft, and Google to strengthen my cloud computing knowledge and validate my technical skills.</p>
+                    </article>
+                </div>
+            </section>
 
-    <h2 class="section-title">Resume</h2>
-    <p>You can view my resume <a href="resume.pdf" target="_blank">here</a>.</p>
+            <section>
+                <h2 class="section-subtitle">Favorite Topics</h2>
+                <div class="feature-grid">
+                    <article class="card">
+                        <h3>Machine Learning</h3>
+                        <p>Machine learning fascinates me because it enables computers to recognize patterns and make intelligent decisions from data. I’m particularly interested in applications involving audio analysis and computer vision.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Data Science</h3>
+                        <p>I enjoy learning how data can be analyzed to uncover meaningful insights and improve machine learning models. Developing a stronger understanding of data science will complement my AI interests.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Game Development</h3>
+                        <p>Game development combines nearly everything I enjoy—programming, problem solving, creativity, and design. Although I’ve built several small games in college, my ultimate goal is to release games on Steam.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Human-Computer Interaction</h3>
+                        <p>Creating software that is intuitive and accessible is important to me. I believe applications and games should be designed so that as many people as possible can enjoy using them.</p>
+                    </article>
+                </div>
+            </section>
 
-    <h2 class="section-title">Interests</h2>
-    <ul>
-        <li>Web Development</li>
-        <li>Graphic Design</li>
-        <li>Artificial Intelligence</li>
-        <li>Open Source Contributions</li>
-    </ul>
+            <section class="focus">
+                <h2 class="section-subtitle">Currently Exploring</h2>
+                <article class="card">
+                    <h3>AI Agents</h3>
+                    <p>I’m currently exploring AI agents and modern machine learning tools to better understand how autonomous systems can solve increasingly complex problems.</p>
+                </article>
+                <article class="card">
+                    <h3>Full-Stack Development</h3>
+                    <p>I’m continuing to expand my full-stack development skills by learning modern backend and frontend technologies while building personal projects.</p>
+                </article>
+                <article class="card">
+                    <h3>DevOps</h3>
+                    <p>I’m beginning to explore DevOps concepts and deployment workflows to better understand how modern applications are built, tested, and deployed.</p>
+                </article>
+            </section>
 
-    <footer>
-        <p>&copy; 2026 Easton Mason. All rights reserved.</p>
-    </footer>
-
-    <!-- This script.js file is linked to the HTML file and can be used to add interactivity and dynamic features to the webpage. -->
-
-    <script src="script.js"></script>
-
-</body>
+            <footer class="site-footer">
+                <p>&copy; 2024 Mason Easton. All rights reserved.</p>
+            </footer>
+            <script src="script.js"></script>
+        </main>
+    </body>
 </html>
