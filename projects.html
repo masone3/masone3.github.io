@@ -1,65 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Easton Mason Portfolio</title>
-
-    <!-- This styles.css file contains the styling for the webpage -->
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projects | Easton Mason</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
 
 
 
-<body>
-    <!-- This HTML file contains the basic structure for a webpage to host my portfolio, interests, and content related to my resume including my resume itself-->
+    <body>
+        <main>
+            <header>
+                <nav class="card container nav-container">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="resume.html">Resume</a></li>
+                        <li><a href="interests.html">Interests</a></li>
+                        <li><a href="projects.html" class="active">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
 
-    <nav class="card container nav-container">
-        <div class="logo">
-            <a href="index.html">Easton Mason</a>
-        </div>
-        <ul class="nav-links">
-            <li><a href="about.html" class="active">About Me</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="interests.html">Interests</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+                    <!-- Mobile Toggle Buttons -->
+                    <div class="mobile-toggle">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </nav>
+            </header>
 
-        <!-- Mobile Toggle Buttons -->
-        <div class="mobile-toggle">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-    </nav>
+            <!-- Hero -->
+            <section class="intro">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <h1 class="section-title">
+                            My <span>Projects</span>
+                        </h1>
 
+                        <h2 class="section-subtitle">
+                            Software • AI • Full Stack Development
+                        </h2>
 
-    <h1 class="name">Easton Mason</h1>
+                        <p>
+                            Below you'll find a collection of projects I've developed
+                            throughout my academic and personal journey. Each project
+                            demonstrates different technologies, design approaches,
+                            and problem-solving skills.
+                        </p>
 
-    <p style="text-align: center;">Welcome to my personal portfolio website! Here, you can explore my interests, view my resume, and learn more about my professional background.</p>
+                        <p>
+                            Many of these projects include live demonstrations hosted
+                            separately using cloud services. Feel free to explore the
+                            demos, source code, and technical details.
+                        </p>
 
-    <h2 class="section-title">About Me</h2>
-    <p>I am a passionate individual with a keen interest in technology, design, and innovation. My goal is to leverage my skills and experiences to contribute meaningfully to the projects I undertake.</p>
+                        <div class="hero-buttons">
+                            <a class="button" href="https://github.com/masone3" target="_blank">
+                                GitHub
+                            </a>
 
-    <h2 class="section-title">Resume</h2>
-    <p>You can view my resume <a href="resume.pdf" target="_blank">here</a>.</p>
+                            <a class="button" href="resume.html">
+                                Resume
+                            </a>
 
-    <h2 class="section-title">Interests</h2>
-    <ul>
-        <li>Web Development</li>
-        <li>Graphic Design</li>
-        <li>Artificial Intelligence</li>
-        <li>Open Source Contributions</li>
-    </ul>
+                            <a class="button" href="contact.html">
+                                Contact Me
+                            </a>
+                        </div>
+                    </div>
 
-    <footer>
-        <p>&copy; 2026 Easton Mason. All rights reserved.</p>
-    </footer>
+                    <div class="card hero-avatar">
+                        <img
+                            src="images/projects-placeholder.png"
+                            alt="Projects Illustration"
+                            class="hero-avatar-image">
+                    </div>
+                </div>
+            </section>
 
-    <!-- This script.js file is linked to the HTML file and can be used to add interactivity and dynamic features to the webpage. -->
+            <!-- Featured Projects -->
+            <section>
+                <h2 class="section-title">
+                    Featured Projects
+                </h2>
 
-    <script src="script.js"></script>
+                <div class="feature-grid">
+                    <!-- Project Card -->
+                    <article class="card">
+                        <img
+                            src="images/project-placeholder.png"
+                            alt="Project Screenshot"
+                            class="hero-avatar-image">
 
-</body>
+                        <h3>
+                            Moodr AI Music Mood Classifier
+                        </h3>
+
+                        <p>
+                            Machine learning application that classifies music using
+                            MFCC audio features and neural networks.
+                        </p>
+
+                        <h4>Technologies</h4>
+
+                        <ul>
+                            <li>Python</li>
+                            <li>PyTorch</li>
+                            <li>Librosa</li>
+                            <li>NumPy</li>
+                        </ul>
+
+                        <div class="hero-buttons">
+
+                            <a class="button"
+                            href="#"
+                            target="_blank">
+                                Live Demo
+                            </a>
+
+                            <a class="button"
+                            href="#"
+                            target="_blank">
+                                GitHub
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project Card -->
+
+                    <article class="card">
+                        <img
+                            src="images/project-placeholder.png"
+                            alt="Project Screenshot"
+                            class="hero-avatar-image">
+
+                        <h3>
+                            Tiny-C Compiler
+                        </h3>
+
+                        <p>
+                            Compiler that translates Python code into Assembly before
+                            generating a Tiny-C representation.
+                        </p>
+
+                        <h4>Technologies</h4>
+
+                        <ul>
+                            <li>Python</li>
+                            <li>Compiler Design</li>
+                            <li>Assembly</li>
+                        </ul>
+
+                        <div class="hero-buttons">
+                            <a class="button"
+                            href="#"
+                            target="_blank">
+                                Live Demo
+                            </a>
+
+                            <a class="button"
+                            href="#"
+                            target="_blank">
+                                GitHub
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project Card -->
+
+                    <article class="card">
+                        <img
+                            src="images/project-placeholder.png"
+                            alt="Project Screenshot"
+                            class="hero-avatar-image">
+
+                        <h3>
+                            Intelligent Exercise Planner
+                        </h3>
+
+                        <p>
+                            AI-assisted workout planner that creates personalized
+                            routines based on user goals and experience.
+                        </p>
+
+                        <h4>Technologies</h4>
+
+                        <ul>
+                            <li>Django</li>
+                            <li>Python</li>
+                            <li>SQLite/PostgreSQL</li>
+                            <li>JavaScript</li>
+                        </ul>
+
+                        <div class="hero-buttons">
+                            <a class="button"
+                            href="#"
+                            target="_blank">
+                                Live Demo
+                            </a>
+
+                            <a class="button"
+                            href="#"
+                            target="_blank">
+                                GitHub
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project Card -->
+
+                    <article class="card">
+                        <img
+                            src="images/project-placeholder.png"
+                            alt="Project Screenshot"
+                            class="hero-avatar-image">
+
+                        <h3>
+                            Steam Statistics Dashboard
+                        </h3>
+
+                        <p>
+                            Interactive dashboard for analyzing Steam game statistics
+                            and player trends.
+                        </p>
+
+                        <h4>Technologies</h4>
+
+                        <ul>
+                            <li>Django</li>
+                            <li>Python</li>
+                            <li>JavaScript</li>
+                            <li>Chart.js</li>
+                        </ul>
+
+                        <div class="hero-buttons">
+                            <a class="button"
+                            href="#"
+                            target="_blank">
+                                Live Demo
+                            </a>
+
+                            <a class="button"
+                            href="#"
+                            target="_blank">
+                                GitHub
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Upcoming -->
+
+            <section class="card">
+                <h2 class="section-subtitle">
+                    Upcoming Projects
+                </h2>
+
+                <div class="feature-grid">
+                    <article>
+                        <h3>AI Resume Analyzer</h3>
+                        <p>Planned</p>
+                    </article>
+
+                    <article>
+                        <h3>Cybersecurity Toolkit</h3>
+                        <p>Planned</p>
+                    </article>
+
+                    <article>
+                        <h3>Personal Finance Dashboard</h3>
+                        <p>Planned</p>
+                    </article>
+
+                    <article>
+                        <h3>More Coming Soon</h3>
+                        <p>Always building something new.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Development Philosophy -->
+
+            <section>
+                <h2 class="section-title">
+                    How I Build Software
+                </h2>
+
+                <div class="feature-grid">
+                    <article>
+                        <h3>Plan</h3>
+                        <p>Identify the problem and define measurable goals.</p>
+                    </article>
+
+                    <article>
+                        <h3>Design</h3>
+                        <p>Create scalable architectures before writing code.</p>
+                    </article>
+
+                    <article>
+                        <h3>Develop</h3>
+                        <p>Implement features incrementally while maintaining clean code.</p>
+                    </article>
+
+                    <article>
+                        <h3>Test</h3>
+                        <p>Validate functionality, usability, and edge cases.</p>
+                    </article>
+
+                    <article>
+                        <h3>Deploy</h3>
+                        <p>Host applications using modern cloud platforms.</p>
+                    </article>
+
+                    <article>
+                        <h3>Improve</h3>
+                        <p>Continue refining projects through user feedback and new ideas.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Future Live Demos -->
+
+            <section class="card">
+                <h2 class="section-subtitle">
+                    Live Project Demos
+                </h2>
+
+                <p>
+                    As projects become production-ready, their live demonstrations
+                    will be hosted independently using Django and cloud hosting
+                    platforms. Each project card above will link directly to the
+                    deployed application.
+                </p>
+            </section>
+
+            <footer class="site-footer">
+                <p>&copy; 2026 Easton Mason. All rights reserved.</p>
+            </footer>
+        </main>
+        <script src="script.js"></script>
+    </body>
 </html>
