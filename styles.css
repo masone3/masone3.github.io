@@ -259,7 +259,7 @@ a.button:hover {
 
 
 a:not(.button):link {
-  color: var(--accent);
+  color: var(--accent-2);
   text-decoration: none;
   transition: color 0.25s ease;
 }
