@@ -243,6 +243,15 @@ a.button:hover {
   border: 1px solid rgba(101, 214, 255, 0.25);
 }
 
+.hero-avatar-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 16px;
+}
+
 /* Shared Content Layout */
 
 .content {
