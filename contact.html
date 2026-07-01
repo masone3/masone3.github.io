@@ -1,65 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Easton Mason Portfolio</title>
-
-    <!-- This styles.css file contains the styling for the webpage -->
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact | Easton Mason</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
 
 
 
-<body>
-    <!-- This HTML file contains the basic structure for a webpage to host my portfolio, interests, and content related to my resume including my resume itself-->
+    <body>
+        <main>
+            <header>
+                <nav class="card container nav-container">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="resume.html">Resume</a></li>
+                        <li><a href="interests.html">Interests</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html" class="active">Contact</a></li>
+                    </ul>
 
-    <nav class="card container nav-container">
-        <div class="logo">
-            <a href="index.html">Easton Mason</a>
-        </div>
-        <ul class="nav-links">
-            <li><a href="about.html" class="active">About Me</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="interests.html">Interests</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+                    <div class="mobile-toggle">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </nav>
+            </header>
 
-        <!-- Mobile Toggle Buttons -->
-        <div class="mobile-toggle">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-    </nav>
+            <section class="intro">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <h1 class="section-title">
+                            Get In <span>Touch</span>
+                        </h1>
 
+                        <h2 class="section-subtitle">
+                            I'd love to hear from you.
+                        </h2>
 
-    <h1 class="name">Easton Mason</h1>
+                        <p>
+                            Whether you have a software engineering opportunity,
+                            a project collaboration, or simply want to connect,
+                            feel free to reach out. I'm always open to discussing
+                            technology, AI, and new ideas.
+                        </p>
 
-    <p style="text-align: center;">Welcome to my personal portfolio website! Here, you can explore my interests, view my resume, and learn more about my professional background.</p>
+                        <div class="hero-buttons">
+                            <a class="button" href="mailto:eastonmason17@gmail.com">Email Me</a>
+                            <a class="button" href="https://www.linkedin.com/in/easton-mason/" target="_blank">
+                                LinkedIn
+                            </a>
+                            <a class="button" href="https://github.com/masone3" target="_blank">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
 
-    <h2 class="section-title">About Me</h2>
-    <p>I am a passionate individual with a keen interest in technology, design, and innovation. My goal is to leverage my skills and experiences to contribute meaningfully to the projects I undertake.</p>
+                    <div class="card">
+                        <h2 class="section-subtitle">Contact Information</h2>
 
-    <h2 class="section-title">Resume</h2>
-    <p>You can view my resume <a href="resume.pdf" target="_blank">here</a>.</p>
+                        <p><strong>Email:</strong><br>eastonmason17@gmail.com</p>
 
-    <h2 class="section-title">Interests</h2>
-    <ul>
-        <li>Web Development</li>
-        <li>Graphic Design</li>
-        <li>Artificial Intelligence</li>
-        <li>Open Source Contributions</li>
-    </ul>
+                        <p><strong>Location:</strong><br>Kentucky, USA</p>
 
-    <footer>
-        <p>&copy; 2026 Easton Mason. All rights reserved.</p>
-    </footer>
+                        <p><strong>Availability:</strong><br>
+                            Open to full-time Software Engineering opportunities.
+                        </p>
+                    </div>
+                </div>
+            </section>
 
-    <!-- This script.js file is linked to the HTML file and can be used to add interactivity and dynamic features to the webpage. -->
+            <section>
+                <h2 class="section-title">Let's Connect</h2>
 
-    <script src="script.js"></script>
+                <div class="feature-grid">
+                    <article>
+                        <h3>Email</h3>
+                        <p>Best for professional inquiries and opportunities.</p>
+                    </article>
 
-</body>
+                    <article>
+                        <h3>LinkedIn</h3>
+                        <p>Connect with me professionally and view my experience.</p>
+                    </article>
+
+                    <article>
+                        <h3>GitHub</h3>
+                        <p>Browse my projects, contributions, and ongoing work.</p>
+                    </article>
+                </div>
+            </section>
+
+            <footer class="site-footer">
+                <p>&copy; 2026 Easton Mason. All rights reserved.</p>
+            </footer>
+        <script src="script.js"></script>
+        </main>
+    </body>
 </html>
