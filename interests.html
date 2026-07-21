@@ -10,24 +10,31 @@
 
 
     <body>
-        <main>
+        <a class="skip-link" href="#main-content">Skip to main content</a>
+        <main id="main-content">
             <header>
-                <nav class="card container nav-container">
-                    <ul class="nav-links">
+                <nav class="card container nav-container" aria-label="Primary">
+                    <a class="brand" href="index.html">Easton Mason<span aria-hidden="true"></span></a>
+                    <ul class="nav-links" id="primary-nav">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Me</a></li>
                         <li><a href="resume.html">Resume</a></li>
-                        <li><a href="interests.html" class="active">Interests</a></li>
+                        <li><a href="interests.html" class="active" aria-current="page">Interests</a></li>
                         <li><a href="projects.html">Projects</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
 
-                    <!-- Mobile Toggle Buttons -->
-                    <div class="mobile-toggle">
+                    <!-- Mobile Menu Toggle -->
+                    <button
+                        type="button"
+                        class="mobile-toggle"
+                        aria-expanded="false"
+                        aria-controls="primary-nav"
+                        aria-label="Open menu">
                         <span class="bar"></span>
                         <span class="bar"></span>
                         <span class="bar"></span>
-                    </div>
+                    </button>
                 </nav>
             </header>
 
@@ -177,7 +184,7 @@
             </section>
 
             <footer class="site-footer">
-                <p>&copy; 2024 Mason Easton. All rights reserved.</p>
+                <p>&copy; 2026 Easton Mason. All rights reserved.</p>
             </footer>
             <script src="script.js"></script>
         </main>

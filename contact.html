@@ -10,23 +10,30 @@
 
 
     <body>
-        <main>
+        <a class="skip-link" href="#main-content">Skip to main content</a>
+        <main id="main-content">
             <header>
-                <nav class="card container nav-container">
-                    <ul class="nav-links">
+                <nav class="card container nav-container" aria-label="Primary">
+                    <a class="brand" href="index.html">Easton Mason<span aria-hidden="true"></span></a>
+                    <ul class="nav-links" id="primary-nav">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Me</a></li>
                         <li><a href="resume.html">Resume</a></li>
                         <li><a href="interests.html">Interests</a></li>
                         <li><a href="projects.html">Projects</a></li>
-                        <li><a href="contact.html" class="active">Contact</a></li>
+                        <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
                     </ul>
 
-                    <div class="mobile-toggle">
+                    <button
+                        type="button"
+                        class="mobile-toggle"
+                        aria-expanded="false"
+                        aria-controls="primary-nav"
+                        aria-label="Open menu">
                         <span class="bar"></span>
                         <span class="bar"></span>
                         <span class="bar"></span>
-                    </div>
+                    </button>
                 </nav>
             </header>
 
@@ -50,11 +57,13 @@
 
                         <div class="hero-buttons">
                             <a class="button" href="mailto:eastonmason17@gmail.com">Email Me</a>
-                            <a class="button" href="https://www.linkedin.com/in/easton-mason/" target="_blank">
+                            <a class="button" href="https://www.linkedin.com/in/easton-mason/" target="_blank" rel="noopener noreferrer">
                                 LinkedIn
+                                 <span class="visually-hidden">(opens in a new tab)</span>
                             </a>
-                            <a class="button" href="https://github.com/masone3" target="_blank">
+                            <a class="button" href="https://github.com/masone3" target="_blank" rel="noopener noreferrer">
                                 GitHub
+                                 <span class="visually-hidden">(opens in a new tab)</span>
                             </a>
                         </div>
                     </div>

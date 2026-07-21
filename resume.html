@@ -10,29 +10,36 @@
 
 
     <body>
-        <main>
+        <a class="skip-link" href="#main-content">Skip to main content</a>
+        <main id="main-content">
             <header>
-                <nav class="card container nav-container">
-                    <ul class="nav-links">
+                <nav class="card container nav-container" aria-label="Primary">
+                    <a class="brand" href="index.html">Easton Mason<span aria-hidden="true"></span></a>
+                    <ul class="nav-links" id="primary-nav">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Me</a></li>
-                        <li><a href="resume.html" class="active">Resume</a></li>
+                        <li><a href="resume.html" class="active" aria-current="page">Resume</a></li>
                         <li><a href="interests.html">Interests</a></li>
                         <li><a href="projects.html">Projects</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
 
-                    <!-- Mobile Toggle Buttons -->
-                    <div class="mobile-toggle">
+                    <!-- Mobile Menu Toggle -->
+                    <button
+                        type="button"
+                        class="mobile-toggle"
+                        aria-expanded="false"
+                        aria-controls="primary-nav"
+                        aria-label="Open menu">
                         <span class="bar"></span>
                         <span class="bar"></span>
                         <span class="bar"></span>
-                    </div>
+                    </button>
                 </nav>
             </header>
 
             <section class="intro">
-                <h2 class="section-title">Resume</h2>
+                <h1 class="section-title">Resume</h1>
                 <p>Explore my professional experience, technical skills, and academic background. You can preview my resume below or download a PDF copy.</p>
             </section>
 

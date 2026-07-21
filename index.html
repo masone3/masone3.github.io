@@ -10,11 +10,13 @@
 
 
     <body>
-        <main>
+        <a class="skip-link" href="#main-content">Skip to main content</a>
+        <main id="main-content">
             <header>
-                <nav class="card container nav-container">
-                    <ul class="nav-links">
-                        <li><a href="index.html" class="active">Home</a></li>
+                <nav class="card container nav-container" aria-label="Primary">
+                    <a class="brand" href="index.html">Easton Mason<span aria-hidden="true"></span></a>
+                    <ul class="nav-links" id="primary-nav">
+                        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
                         <li><a href="about.html">About Me</a></li>
                         <li><a href="resume.html">Resume</a></li>
                         <li><a href="interests.html">Interests</a></li>
@@ -22,12 +24,17 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                     
-                    <!-- Mobile Toggle Buttons -->
-                    <div class="mobile-toggle">
+                    <!-- Mobile Menu Toggle -->
+                    <button
+                        type="button"
+                        class="mobile-toggle"
+                        aria-expanded="false"
+                        aria-controls="primary-nav"
+                        aria-label="Open menu">
                         <span class="bar"></span>
                         <span class="bar"></span>
                         <span class="bar"></span>
-                    </div>
+                    </button>
                 </nav>
             </header>
 
@@ -54,11 +61,13 @@
                             <a class="button" href="contact.html">
                                 Contact Me
                             </a>
-                            <a class="button" href="https://github.com/masone3" target="_blank">
+                            <a class="button" href="https://github.com/masone3" target="_blank" rel="noopener noreferrer">
                                 GitHub
+                                 <span class="visually-hidden">(opens in a new tab)</span>
                             </a>
-                            <a class="button" href="https://www.linkedin.com/in/easton-mason/" target="_blank">
+                            <a class="button" href="https://www.linkedin.com/in/easton-mason/" target="_blank" rel="noopener noreferrer">
                                 LinkedIn
+                                 <span class="visually-hidden">(opens in a new tab)</span>
                             </a>
                         </div>
                         <p>
@@ -74,10 +83,10 @@
                 </div>
             </section>
 
-            <!-- About / Skills -->
+            <!-- About -->
             <section>
                 <div class="about">
-                    <h2 class="section-subtitle">About Me</h2>
+                    <h2 class="section-title">About Me</h2>
                     <p class="content">
                         My journey into software engineering began in high school through
                         introductory HTML courses. That curiosity quickly evolved into
@@ -96,6 +105,10 @@
                         knowledge in AI, system design, and cybersecurity.
                     </p>
                 </div>
+            </section>
+
+            <!-- Skills -->
+            <section>
                 <h2 class="section-title">Skills</h2>
                 <div class="feature-grid">
                     <article>
@@ -136,7 +149,7 @@
 
             <!-- Featured Projects -->
             <section class="card">
-                <h2 class="section-subtitle">Featured Projects</h2>
+                <h2 class="section-title">Featured Projects</h2>
                 <div class="feature-grid">
                     <article>
                         <h3>AI Music Mood Classifier</h3>
@@ -145,6 +158,10 @@
                     <article>
                         <h3>Tiny-C Compiler</h3>
                         <p>Compiler that translates Python into Assembly before producing miniature C.</p>
+                    </article>
+                    <article>
+                        <h3>TMDB Movie Explorer</h3>
+                        <p>React app for browsing, searching, and filtering movies using the TMDB API.</p>
                     </article>
                     <article>
                         <h3>Intelligent Exercise Planner / Assistant</h3>
@@ -279,25 +296,25 @@
             </section>
 
             <!-- Stats -->
-            <section>
+            <section class="stats">
                 <h2 class="section-title">
                     Highlights
                 </h2>
                 <div class="feature-grid">
                     <article>
-                        <h2>4+</h2>
+                        <h3>4+</h3>
                         <p>Major Projects</p>
                     </article>
                     <article>
-                        <h2>5</h2>
+                        <h3>5</h3>
                         <p>Programming Languages</p>
                     </article>
                     <article>
-                        <h2>10+</h2>
+                        <h3>10+</h3>
                         <p>Technologies</p>
                     </article>
                     <article>
-                        <h2>2026</h2>
+                        <h3>2026</h3>
                         <p>Berea College Graduate</p>
                     </article>
                 </div>

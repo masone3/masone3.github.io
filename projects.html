@@ -10,24 +10,31 @@
 
 
     <body>
-        <main>
+        <a class="skip-link" href="#main-content">Skip to main content</a>
+        <main id="main-content">
             <header>
-                <nav class="card container nav-container">
-                    <ul class="nav-links">
+                <nav class="card container nav-container" aria-label="Primary">
+                    <a class="brand" href="index.html">Easton Mason<span aria-hidden="true"></span></a>
+                    <ul class="nav-links" id="primary-nav">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Me</a></li>
                         <li><a href="resume.html">Resume</a></li>
                         <li><a href="interests.html">Interests</a></li>
-                        <li><a href="projects.html" class="active">Projects</a></li>
+                        <li><a href="projects.html" class="active" aria-current="page">Projects</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
 
-                    <!-- Mobile Toggle Buttons -->
-                    <div class="mobile-toggle">
+                    <!-- Mobile Menu Toggle -->
+                    <button
+                        type="button"
+                        class="mobile-toggle"
+                        aria-expanded="false"
+                        aria-controls="primary-nav"
+                        aria-label="Open menu">
                         <span class="bar"></span>
                         <span class="bar"></span>
                         <span class="bar"></span>
-                    </div>
+                    </button>
                 </nav>
             </header>
 
@@ -57,8 +64,9 @@
                         </p>
 
                         <div class="hero-buttons">
-                            <a class="button" href="https://github.com/masone3" target="_blank">
+                            <a class="button" href="https://github.com/masone3" target="_blank" rel="noopener noreferrer">
                                 GitHub
+                                 <span class="visually-hidden">(opens in a new tab)</span>
                             </a>
 
                             <a class="button" href="resume.html">
@@ -116,14 +124,16 @@
 
                             <a class="button"
                             href="#"
-                            target="_blank">
+                            target="_blank" rel="noopener noreferrer">
                                 Live Demo
+                                 <span class="visually-hidden">(opens in a new tab)</span>
                             </a>
 
                             <a class="button"
                             href="#"
-                            target="_blank">
+                            target="_blank" rel="noopener noreferrer">
                                 GitHub
+                                 <span class="visually-hidden">(opens in a new tab)</span>
                             </a>
                         </div>
                     </article>
@@ -156,14 +166,55 @@
                         <div class="hero-buttons">
                             <a class="button"
                             href="#"
-                            target="_blank">
+                            target="_blank" rel="noopener noreferrer">
                                 Live Demo
+                                 <span class="visually-hidden">(opens in a new tab)</span>
                             </a>
 
                             <a class="button"
                             href="#"
-                            target="_blank">
+                            target="_blank" rel="noopener noreferrer">
                                 GitHub
+                                 <span class="visually-hidden">(opens in a new tab)</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project Card -->
+
+                    <article class="card">
+                        <img
+                            src="images/project-placeholder.png"
+                            alt="TMDB Movie Explorer screenshot placeholder"
+                            class="hero-avatar-image">
+
+                        <h3>
+                            TMDB Movie Explorer
+                        </h3>
+
+                        <p>
+                            A React client for browsing, searching, and filtering
+                            movies using the TMDB API, with debounced search,
+                            genre and release-year filters, infinite scroll, and
+                            persistent favorites.
+                        </p>
+
+                        <h4>Technologies</h4>
+
+                        <ul>
+                            <li>React + Vite</li>
+                            <li>TanStack React Query</li>
+                            <li>Axios</li>
+                            <li>Tailwind CSS</li>
+                            <li>TMDB API</li>
+                        </ul>
+
+                        <div class="hero-buttons">
+                            <a class="button"
+                            href="https://github.com/masone3/tmdb-movie-explorer"
+                            target="_blank" rel="noopener noreferrer">
+                                GitHub
+                                 <span class="visually-hidden">(opens in a new tab)</span>
                             </a>
                         </div>
                     </article>
@@ -197,14 +248,16 @@
                         <div class="hero-buttons">
                             <a class="button"
                             href="#"
-                            target="_blank">
+                            target="_blank" rel="noopener noreferrer">
                                 Live Demo
+                                 <span class="visually-hidden">(opens in a new tab)</span>
                             </a>
 
                             <a class="button"
                             href="#"
-                            target="_blank">
+                            target="_blank" rel="noopener noreferrer">
                                 GitHub
+                                 <span class="visually-hidden">(opens in a new tab)</span>
                             </a>
                         </div>
                     </article>
@@ -238,14 +291,16 @@
                         <div class="hero-buttons">
                             <a class="button"
                             href="#"
-                            target="_blank">
+                            target="_blank" rel="noopener noreferrer">
                                 Live Demo
+                                 <span class="visually-hidden">(opens in a new tab)</span>
                             </a>
 
                             <a class="button"
                             href="#"
-                            target="_blank">
+                            target="_blank" rel="noopener noreferrer">
                                 GitHub
+                                 <span class="visually-hidden">(opens in a new tab)</span>
                             </a>
                         </div>
                     </article>
@@ -261,17 +316,17 @@
 
                 <div class="feature-grid">
                     <article>
-                        <h3>AI Resume Analyzer</h3>
+                        <h3>Workout Planner</h3>
                         <p>Planned</p>
                     </article>
 
                     <article>
-                        <h3>Cybersecurity Toolkit</h3>
+                        <h3>Real-time Chat Application</h3>
                         <p>Planned</p>
                     </article>
 
                     <article>
-                        <h3>Personal Finance Dashboard</h3>
+                        <h3>Steam Game Statistics Dashboard</h3>
                         <p>Planned</p>
                     </article>
 

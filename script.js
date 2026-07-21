@@ -1,19 +1,7 @@
 (function() {
-  const STAR_COLORS = ['#ffffff', '#f8f1ff', '#fff5c7', '#ffdfe5'];
-  let starfieldCanvas;
-  let starCtx;
-  let stars = [];
-
   function injectGlobalStyles() {
     const style = document.createElement('style');
     style.textContent = `
-      .starfield-canvas {
-        position: fixed;
-        inset: 0;
-        z-index: -1;
-        pointer-events: none;
-      }
-
       .interactive-animate {
         transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease, color 220ms ease;
         will-change: transform, opacity;
@@ -41,66 +29,6 @@
       }
     `;
     document.head.appendChild(style);
-  }
-
-  function buildStarfield() {
-    const width = window.innerWidth;
-    const height = window.innerHeight;
-    stars = [];
-    const count = Math.max(100, Math.round((width * height) / 14000));
-
-    for (let i = 0; i < count; i += 1) {
-      stars.push({
-        x: Math.random() * width,
-        y: Math.random() * height,
-        radius: Math.random() * 1.6 + 0.4,
-        baseAlpha: Math.random() * 0.6 + 0.3,
-        phase: Math.random() * Math.PI * 2,
-        speed: Math.random() * 0.0025 + 0.0008,
-        color: STAR_COLORS[Math.floor(Math.random() * STAR_COLORS.length)],
-      });
-    }
-  }
-
-  function resizeStarfield() {
-    const dpr = window.devicePixelRatio || 1;
-    starfieldCanvas.width = window.innerWidth * dpr;
-    starfieldCanvas.height = window.innerHeight * dpr;
-    starfieldCanvas.style.width = `${window.innerWidth}px`;
-    starfieldCanvas.style.height = `${window.innerHeight}px`;
-    starCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    buildStarfield();
-  }
-
-  function drawStarfield(timestamp = 0) {
-    const width = window.innerWidth;
-    const height = window.innerHeight;
-    starCtx.clearRect(0, 0, width, height);
-
-    stars.forEach((star) => {
-      const alpha = star.baseAlpha + Math.sin(star.phase + timestamp * star.speed) * 0.25;
-      const radius = star.radius * (0.8 + 0.3 * Math.sin(star.phase * 1.3));
-      star.phase += star.speed;
-
-      starCtx.beginPath();
-      starCtx.arc(star.x, star.y, radius, 0, Math.PI * 2);
-      starCtx.fillStyle = `rgba(255,255,255,${Math.max(0.18, Math.min(1, alpha))})`;
-      starCtx.shadowBlur = 8;
-      starCtx.shadowColor = star.color;
-      starCtx.fill();
-    });
-
-    window.requestAnimationFrame(drawStarfield);
-  }
-
-  function createStarfieldCanvas() {
-    starfieldCanvas = document.createElement('canvas');
-    starfieldCanvas.className = 'starfield-canvas';
-    document.body.prepend(starfieldCanvas);
-    starCtx = starfieldCanvas.getContext('2d');
-    resizeStarfield();
-    window.addEventListener('resize', resizeStarfield);
-    window.requestAnimationFrame(drawStarfield);
   }
 
   function enhanceInteractiveElements() {
@@ -195,7 +123,6 @@
 
   document.addEventListener('DOMContentLoaded', () => {
     injectGlobalStyles();
-    createStarfieldCanvas();
     enhanceInteractiveElements();
     setupDropdownMenus();
   });
@@ -204,8 +131,46 @@
   const navLinks = document.querySelector('.nav-links');
 
   if (mobileToggle && navLinks) {
+    const closeMenu = () => {
+      navLinks.classList.remove('active');
+      mobileToggle.setAttribute('aria-expanded', 'false');
+      mobileToggle.setAttribute('aria-label', 'Open menu');
+    };
+
+    const openMenu = () => {
+      navLinks.classList.add('active');
+      mobileToggle.setAttribute('aria-expanded', 'true');
+      mobileToggle.setAttribute('aria-label', 'Close menu');
+    };
+
     mobileToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
+      const isOpen = navLinks.classList.contains('active');
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    // Close the menu after choosing a link, so it doesn't stay open
+    // when the next page loads.
+    navLinks.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Close on outside click and on Escape, and return focus to the toggle.
+    document.addEventListener('click', (event) => {
+      const clickedInsideNav = navLinks.contains(event.target) || mobileToggle.contains(event.target);
+      if (!clickedInsideNav && navLinks.classList.contains('active')) {
+        closeMenu();
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && navLinks.classList.contains('active')) {
+        closeMenu();
+        mobileToggle.focus();
+      }
     });
   }
 })();

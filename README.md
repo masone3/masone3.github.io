@@ -6,7 +6,15 @@ A personal portfolio website showcasing my background, technical skills, project
 
 ## ✨ Features
 
-- Responsive design for desktop and mobile devices
+- Clean, minimal, developer-flavored design (monospace headings, single accent color)
+- Fully responsive, mobile-first layout with an accessible slide-down nav menu
+- Built to WCAG-conscious accessibility standards:
+  - Skip-to-content link
+  - Visible keyboard focus states throughout
+  - Semantic heading hierarchy (one `<h1>` per page)
+  - Accessible mobile menu button (`aria-expanded`, `aria-controls`, keyboard/Escape support)
+  - `prefers-reduced-motion` support
+  - Color contrast checked against WCAG AA
 - About Me section
 - Skills overview
 - Featured projects
@@ -17,8 +25,9 @@ A personal portfolio website showcasing my background, technical skills, project
 ## 🛠️ Built With
 
 - HTML5
-- CSS3
-- JavaScript
+- CSS3 (custom properties / design tokens, no framework)
+- JavaScript (vanilla)
+- [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono) + [Inter](https://fonts.google.com/specimen/Inter) via Google Fonts
 
 ## 📁 Project Structure
 
@@ -52,11 +61,12 @@ git clone https://github.com/masone3/masone3.github.io.git
 
 ## 🔮 Future Improvements
 
+- Add real screenshots and working live-demo / GitHub links for in-progress projects
+- Add automated accessibility testing (e.g., axe-core or Lighthouse CI)
 - Add additional project case studies
-- Improve accessibility and SEO
+- Improve SEO (meta descriptions, Open Graph tags)
 - Add project filtering and search
-- Expand animations and UI polish
-- Continue refining mobile responsiveness
+- Continue refining animations and UI polish
 
 ## 👤 Author
 
