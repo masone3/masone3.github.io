@@ -11,18 +11,19 @@
    1. Design tokens
    --------------------------------------------------------- */
 :root {
-  /* Color */
-  --bg: #faf9f6;
-  --bg-raised: #ffffff;
-  --bg-muted: #f1f0eb;
-  --ink: #15181d;
-  --ink-soft: #4b505a;
-  --line: #e2e0d8;
-  --line-strong: #cac7bb;
-  --accent: #1b6e52;
-  --accent-strong: #124f3b;
-  --accent-soft: #e5efe9;
-  --focus-ring: #1256c4;
+  /* Color — Amethyst Night (default) */
+  --bg: #16131f;
+  --bg-raised: #1d1930;
+  --bg-muted: #221c36;
+  --ink: #eeeaf7;
+  --ink-soft: #b7afcb;
+  --line: #332b4a;
+  --line-strong: #4a3f6b;
+  --accent: #a78bfa;
+  --accent-strong: #c4b5fd;
+  --accent-soft: #241e3d;
+  --on-accent: #16131f;
+  --focus-ring: var(--accent);
 
   /* Type */
   --font-display: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
@@ -41,6 +42,24 @@
   --measure: 68ch;
   --radius: 12px;
   --radius-sm: 8px;
+}
+
+/* Light mode — "Violet ink", same purple family as Amethyst Night,
+   just flipped light. Activated by [data-theme="light"] on <html>,
+   set by script.js and persisted in localStorage. */
+:root[data-theme="light"] {
+  --bg: #faf9fc;
+  --bg-raised: #ffffff;
+  --bg-muted: #f1eef8;
+  --ink: #17151f;
+  --ink-soft: #514d5e;
+  --line: #e4e0ed;
+  --line-strong: #ccc5de;
+  --accent: #5b3fa6;
+  --accent-strong: #432e7d;
+  --accent-soft: #ede7f9;
+  --on-accent: #ffffff;
+  --focus-ring: var(--accent);
 }
 
 /* ---------------------------------------------------------
@@ -71,6 +90,7 @@ body {
   background: var(--bg);
   line-height: 1.6;
   overflow-x: hidden;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 img {
@@ -108,7 +128,7 @@ a {
   left: 1rem;
   z-index: 1000;
   background: var(--ink);
-  color: #ffffff;
+  color: var(--bg);
   padding: 0.85rem 1.25rem;
   border-radius: var(--radius-sm);
   font-family: var(--font-display);
@@ -270,6 +290,13 @@ header {
   margin: 0;
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
 .nav-links li a {
   display: inline-flex;
   align-items: center;
@@ -329,6 +356,47 @@ header {
   transform: translateY(-7px) rotate(-45deg);
 }
 
+/* Light/dark theme toggle */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.theme-toggle svg {
+  width: 18px;
+  height: 18px;
+}
+
+.theme-toggle .icon-moon {
+  display: block;
+}
+
+.theme-toggle .icon-sun {
+  display: none;
+}
+
+:root[data-theme="light"] .theme-toggle .icon-moon {
+  display: none;
+}
+
+:root[data-theme="light"] .theme-toggle .icon-sun {
+  display: block;
+}
+
 /* ---------------------------------------------------------
    7. Buttons
    --------------------------------------------------------- */
@@ -355,7 +423,7 @@ a.button:hover,
 button:hover {
   background: var(--accent);
   border-color: var(--accent);
-  color: #ffffff;
+  color: var(--on-accent);
   transform: translateY(-1px);
 }
 

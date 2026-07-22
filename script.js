@@ -173,4 +173,36 @@
       }
     });
   }
+
+  // Light/dark theme toggle, persisted in localStorage.
+  const themeToggle = document.querySelector('.theme-toggle');
+
+  if (themeToggle) {
+    const getCurrentTheme = () =>
+      document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+
+    const applyTheme = (theme) => {
+      if (theme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+      }
+      themeToggle.setAttribute(
+        'aria-label',
+        theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme'
+      );
+    };
+
+    // Sync the button's label with whatever the blocking head script
+    // already applied, so it's correct even before any click.
+    applyTheme(getCurrentTheme());
+
+    themeToggle.addEventListener('click', () => {
+      const next = getCurrentTheme() === 'light' ? 'dark' : 'light';
+      applyTheme(next);
+      try {
+        localStorage.setItem('theme', next);
+      } catch (e) {}
+    });
+  }
 })();
