@@ -24,6 +24,7 @@
   --accent-soft: #241e3d;
   --on-accent: #16131f;
   --focus-ring: var(--accent);
+  color-scheme: dark;
 
   /* Type */
   --font-display: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
@@ -60,6 +61,7 @@
   --accent-soft: #ede7f9;
   --on-accent: #ffffff;
   --focus-ring: var(--accent);
+  color-scheme: light;
 }
 
 /* ---------------------------------------------------------
@@ -323,37 +325,44 @@ header {
 /* Mobile menu toggle button */
 .mobile-toggle {
   display: none;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 5px;
+  justify-content: center;
   width: 44px;
   height: 44px;
   border: 1px solid var(--line-strong);
   border-radius: var(--radius-sm);
   background: transparent;
+  color: var(--ink);
   cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
-.mobile-toggle .bar {
-  display: block;
+.mobile-toggle svg {
   width: 20px;
-  height: 2px;
-  background: var(--ink);
-  border-radius: 999px;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  height: 20px;
+  min-width: 20px;
+  flex-shrink: 0;
+  display: block;
+  forced-color-adjust: none;
 }
 
-.mobile-toggle[aria-expanded="true"] .bar:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
+.mobile-toggle:hover {
+  background: transparent;
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
-.mobile-toggle[aria-expanded="true"] .bar:nth-child(2) {
-  opacity: 0;
+.mobile-toggle .icon-close {
+  display: none;
 }
 
-.mobile-toggle[aria-expanded="true"] .bar:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
+.mobile-toggle[aria-expanded="true"] .icon-menu {
+  display: none;
+}
+
+.mobile-toggle[aria-expanded="true"] .icon-close {
+  display: block;
 }
 
 /* Light/dark theme toggle */
@@ -369,9 +378,12 @@ header {
   background: transparent;
   color: var(--ink);
   cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
 .theme-toggle:hover {
+  background: transparent;
   border-color: var(--accent);
   color: var(--accent);
 }
@@ -379,6 +391,10 @@ header {
 .theme-toggle svg {
   width: 18px;
   height: 18px;
+  min-width: 18px;
+  flex-shrink: 0;
+  display: block;
+  forced-color-adjust: none;
 }
 
 .theme-toggle .icon-moon {
@@ -405,6 +421,7 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.5rem;
   min-height: 44px;
   padding: 0.75rem 1.5rem;
   border-radius: var(--radius-sm);
@@ -417,6 +434,14 @@ button {
   text-decoration: none;
   cursor: pointer;
   transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+a.button svg {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  flex-shrink: 0;
+  display: block;
 }
 
 a.button:hover,
@@ -736,4 +761,16 @@ h1,
 h2,
 h3 {
   overflow-wrap: break-word;
+}
+
+/* Belt-and-suspenders: some browsers need an explicit color declared
+   alongside forced-color-adjust: none to guarantee these icons paint
+   under forced-colors / high-contrast mode, rather than just being
+   exempted and left to fall back on nothing. */
+@media (forced-colors: active) {
+  .theme-toggle svg,
+  .mobile-toggle svg {
+    forced-color-adjust: none;
+    color: CanvasText;
+  }
 }
